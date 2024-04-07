@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <h1>EECS 348 Lab 7 Practice 2</h1>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<style>
+    #paragraph {
+        border-style: solid;
+        border-width: 5px;
+    }
+</style>
+
+<body>
+    <div id="paragraph">
+
+        When electron-rich arylpyrrolinium salts are irradiated with ultraviolet light in the presence of Michael acceptors, the pyrrolinyl and aryl fragments add to the activated and polarized double bond in a regioselective manner, forming two C-C bonds and fragmenting the substrate. In this paper, we present a model for this intriguing reaction, supported by spectroscopy and computational analyses, and provide evidence for rectifying previously misassigned structures. We postulate that the photochemical reaction is inefficient because the reaction between the twisted intramolecular charge-transfer state and the olefin competes with fluorescence from this state upon photon absorption. We also discuss the practical advantages of performing this photochemical reaction in a continuous flow setup. Additionally, we explore several subsequent reactions that allow us to further modify the products of the photochemical step, ultimately leading to the creation of new chemical structures.
+
+    </div>
+
+    <script type="text/javascript" src="functions.js"></script>
+    Border R(0-255): <input type="text" id="border_R" value=""> <br>
+    Border G(0-255): <input type="text" id="border_G" value=""> <br>
+    Border B(0-255): <input type="text" id="border_B" value=""> <br>
+    Border Width: <input type="text" id="border_width" value=""> <br>
+    Background R(0-255): <input type="text" id="bg_R" value=""> <br>
+    Background G(0-255): <input type="text" id="bg_G" value=""> <br>
+    Background B(0-255): <input type="text" id="bg_B" value=""> <br>
+    <button onclick="apply_styling()">Change the styling!</button> <br>
+    
+    <script>
+        function apply_styling(){
+            var paragraph = document.getElementById("paragraph");
+            var BorderR = document.getElementById("border_R").value;
+            var BorderG = document.getElementById("border_G").value;
+            var BorderB = document.getElementById("border_B").value;
+            
+            var BackgroundR = document.getElementById("bg_R").value;
+            var BackgroundG = document.getElementById("bg_G").value;
+            var BackgroundB = document.getElementById("bg_B").value;
+
+            var BorderWidth = document.getElementById("border_width").value;
+
+            paragraph.style.borderColor = "rgb(" + BorderR + "," + BorderG + "," + BorderB + ")";
+            paragraph.style.borderWidth = BorderWidth + "px";
+            paragraph.style.backgroundColor = "rgb(" + BackgroundR + "," + BackgroundG + "," + BackgroundB + ")";
+        }
+    </script>
+</body>
+
+</html>
